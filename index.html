@@ -352,30 +352,77 @@
       
         
           
-          作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。
-安装前提1.Node.js：生成Hexo静态页面，下载安装 Node.js2.Git：本地Hexo提交到Github，下载安装 Git这里说一下我的系统是 macOS High Sierra 10.13.5
-安装Hexo 官方文档上面的环境没问题，使用npm安装hexo很简单，打开终端执行命令，记得加 sudo
-$ sudo npm install -g hexo
-创建Hexo存储文件夹（如blog，以下都会用blog表示），初始化Hexo
-$ cd blog
+            <p>作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。</p>
+<h2 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h2><p>1.Node.js：生成Hexo静态页面，下载安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a><br>2.Git：本地Hexo提交到Github，下载安装 <a href="https://git-scm.com" target="_blank" rel="noopener">Git</a><br>这里说一下我的系统是 macOS High Sierra 10.13.5</p>
+<h2 id="安装Hexo-官方文档"><a href="#安装Hexo-官方文档" class="headerlink" title="安装Hexo 官方文档"></a>安装Hexo <small><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">官方文档</a></small></h2><p>上面的环境没问题，使用npm安装hexo很简单，打开终端执行命令，记得加 <code>sudo</code></p>
+<pre><code>$ sudo npm install -g hexo
+</code></pre><p>创建Hexo存储文件夹（如blog，以下都会用blog表示），初始化Hexo</p>
+<pre><code>$ cd blog
 $ hexo init
-同blog路径，初始化npm
-$ npm install
-Hexo命名执行
-执行generate命令生成静态文件
+</code></pre><p>同blog路径，初始化npm</p>
+<pre><code>$ npm install
+</code></pre><p>Hexo命名执行</p>
+<pre><code>执行generate命令生成静态文件
 $ hexo g
 部署到本地服务器
 $ hexo s
-生成博客本地地址 http://localhost:4000 ，打开浏览器，输入地址，biu这就是你的博客了。
-创建Github仓库登录自己github账号，在个人中心Sett
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/03/hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+</code></pre><p>生成博客本地地址 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，打开浏览器，输入地址，biu这就是你的博客了。</p>
+<h2 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h2><p>登录自己github账号，在个人中心<code>Settings/Repositories</code>，<strong>create a new Repository</strong>。<strong>Repository name</strong>格式必须是 <code>username.github.io</code>，<strong>username</strong>是你的github的username，仓库就OK了。 <a href="">https://username.github.io</a> 以后就是你的博客域名。</p>
+<h2 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h2><p>blog目录下，打开 <code>_config.yml</code>文件，修改下面的配置，repository设置自己的仓库<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<p>Hexo命令署到github仓库，<strong><em>注意</em></strong> ，每次必须执行下面三条命名</p>
+<pre><code>清除缓存
+$ hexo clean
+执行generate命令生成静态文件
+$ hexo g
+部署到本地服务器
+$ hexo d
+</code></pre><p>命令执行成功后，浏览器打开自己的博客 <a href="">https://username.github.io</a>，现在就大功告成了，自己可以大笑三声了。<br><strong><em>这里先不讲绑定自己的服务器，以后绑定后更新</em></strong></p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>你可以执行下列命令来创建一篇新文章。Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径。</p>
+<pre><code>$ hexo new [layout] &lt;title&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>布局</strong></th>
+<th style="text-align:left"><strong>路径</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">post</td>
+<td style="text-align:left">source/_posts</td>
+</tr>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:left">source</td>
+</tr>
+<tr>
+<td style="text-align:center">draft</td>
+<td style="text-align:left">source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<p>Hexo 使用 <a href="http://www.markdown.cn" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章。</p>
+<h2 id="NexT主题-官方文档"><a href="#NexT主题-官方文档" class="headerlink" title="NexT主题 官方文档"></a>NexT主题 <small><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">官方文档</a></small></h2><p>NexT主题是自己比较的风格，这里为大家推介一下，也可以到 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Theme</a> 找自己喜欢的主题。<br>命令行下载主题</p>
+<pre><code>$ cd blog
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><p>blog目录下，打开 <code>_config.yml</code>文件，找到<code>theme</code>字段，并将其值更改为<code>next</code>。<br>Hexo命令，<strong><em>注意</em></strong> 部署到本地，同样必须执行下面三条命名，浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<pre><code>$ hexo clean
+$ hexo g
+$ hexo s
+</code></pre><h4 id="访问统计"><a href="#访问统计" class="headerlink" title="访问统计"></a>访问统计</h4><p>打开<strong>blog/themes/next/_config.yml</strong>文件添加汉字就可以，safari浏览器uv统计不准确<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">site_uv:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span> <span class="string">访客数</span></span><br><span class="line"><span class="attr">site_uv_footer:</span></span><br><span class="line"><span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span> <span class="string">访问</span></span><br><span class="line"><span class="attr">site_pv_footer:</span> <span class="string">次</span></span><br><span class="line"><span class="comment"># custom pv span for one page only</span></span><br><span class="line"><span class="attr">page_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">page_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-file-o"&gt;&lt;/i&gt;</span> <span class="string">阅读数</span></span><br><span class="line"><span class="attr">page_pv_footer:</span></span><br></pre></td></tr></table></figure></p>
+<p>其他设置根据官方文档，设置自己喜欢的样式就好了。</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>avatar头像设置是在站点配置文件下<code>（blog/_config.yml）</code>配置，文档上不正确</p>
+<h2 id="Gitment评论"><a href="#Gitment评论" class="headerlink" title="Gitment评论"></a>Gitment评论</h2><p><strong><em>注意</em></strong> gitment的文档很久没有更新了，使自己走了不少弯路</p>
+<ol>
+<li>注册 OAuth Application<br><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener"><strong>点击此处</strong></a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（自己博客的域名，如<code>username.github.io</code>）。</li>
+<li><p>引入 Gitment<br><strong><em>直接<code>blog/themes/next/_config.yml</code>修改，不要跟着文档转圈圈哦</em></strong>，上代码，github_repo<strong><em>一定写博客的域名</em></strong> client_id注册申请的id，client_secret申请的secret</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">mint:</span> <span class="literal">true</span> <span class="comment"># RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span></span><br><span class="line"><span class="attr">count:</span> <span class="literal">true</span> <span class="comment"># Show comments count in post meta area</span></span><br><span class="line"><span class="attr">lazy:</span> <span class="literal">true</span> <span class="comment"># Comments lazy loading with a button</span></span><br><span class="line"><span class="attr">cleanly:</span> <span class="literal">false</span> <span class="comment"># Hide 'Powered by ...' on footer, and more</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">github_user:</span> <span class="string">username</span></span><br><span class="line"><span class="attr">github_repo:</span> <span class="string">username.github.io</span></span><br><span class="line"><span class="attr">client_id:</span> <span class="string">aaaaaaaaaaaaaa</span></span><br><span class="line"><span class="attr">client_secret:</span> <span class="string">bbbbbbbbbbbbbbbbbbbbbbbbb</span></span><br><span class="line"><span class="attr">proxy_gateway:</span> <span class="comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line"><span class="attr">redirect_protocol:</span> <span class="comment"># Protocol of redirect_uri with force_redirect_protocol when mint enabled</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化评论<br>页面发布后，你需要访问页面并使用你的 GitHub 账号登录（请确保你的账号是第二步所填 repo 的 owner），点击初始化按钮。<strong><em>不点击初始化，显示评论未开启</em></strong></p>
+</li>
+</ol>
+
+          
         
       
     </div>
@@ -515,17 +562,10 @@ $ hexo s
       
         
           
-          哈哈哈，盘古开天辟地第一天，希望以后写出很多好的博客。
-最近工作不忙，想开始自己的博客。古人诗兴大发多是在钟灵毓秀之地，写博客的地方，一定是自己喜欢的才行。也想过在博客园或者简书写博客，后面感觉还是不符合自己的心意，程序工程师对github颇有好感，hexo的风格让自己感觉清爽，以后就在这儿写东西了。今天抽时间搭建了自己的博客，就想大笑三声。
+            <p>哈哈哈，盘古开天辟地第一天，希望以后写出很多好的博客。</p>
+<p>最近工作不忙，想开始自己的博客。古人诗兴大发多是在钟灵毓秀之地，写博客的地方，一定是自己喜欢的才行。也想过在博客园或者简书写博客，后面感觉还是不符合自己的心意，程序工程师对github颇有好感，hexo的风格让自己感觉清爽，以后就在这儿写东西了。今天抽时间搭建了自己的博客，就想大笑三声。</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/29/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
