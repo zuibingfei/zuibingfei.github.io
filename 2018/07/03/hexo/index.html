@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="醉冰飞">
 <meta property="og:description" content="作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。 安装前提1.Node.js：生成Hexo静态页面，下载安装 Node.js2.Git：本地Hexo提交到Github，下载安装 Git这里说一下我的系统是 macOS High Sierra">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T02:01:34.019Z">
+<meta property="og:updated_time" content="2018-07-04T02:33:20.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Page+Hexo  NexT+Gitment个人博客">
 <meta name="twitter:description" content="作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。 安装前提1.Node.js：生成Hexo静态页面，下载安装 Node.js2.Git：本地Hexo提交到Github，下载安装 Git这里说一下我的系统是 macOS High Sierra">
@@ -307,7 +307,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-04T10:33:20+08:00">
+                2018-07-04
+              </time>
             
           </span>
 
@@ -336,16 +348,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/03/hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/03/hexo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
             
           
 
@@ -393,11 +395,9 @@ $ hexo s
 </code></pre><p>生成博客本地地址 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，打开浏览器，输入地址，biu这就是你的博客了。</p>
 <h2 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h2><p>登录自己github账号，在个人中心<code>Settings/Repositories</code>，<strong>create a new Repository</strong>。<strong>Repository name</strong>格式必须是 <code>username.github.io</code>，<strong>username</strong>是你的github的username，仓库就OK了。 <a href="">https://username.github.io</a> 以后就是你的博客域名。</p>
 <h2 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h2><p>blog目录下，打开 <code>_config.yml</code>文件，修改下面的配置，repository设置自己的仓库<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
-<p>Hexo命令署到github仓库，<strong><em>注意</em></strong> ，每次必须执行下面三条命名</p>
+<p>Hexo命令署到github仓库，<strong><em>注意</em></strong> ，必须执行hexo clean清除缓存</p>
 <pre><code>清除缓存
 $ hexo clean
-执行generate命令生成静态文件
-$ hexo g
 部署到本地服务器
 $ hexo d
 </code></pre><p>命令执行成功后，浏览器打开自己的博客 <a href="">https://username.github.io</a>，现在就大功告成了，自己可以大笑三声了。<br><strong><em>这里先不讲绑定自己的服务器，以后绑定后更新</em></strong></p>
@@ -429,7 +429,7 @@ $ hexo d
 <h2 id="NexT主题-官方文档"><a href="#NexT主题-官方文档" class="headerlink" title="NexT主题 官方文档"></a>NexT主题 <small><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">官方文档</a></small></h2><p>NexT主题是自己比较的风格，这里为大家推介一下，也可以到 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Theme</a> 找自己喜欢的主题。<br>命令行下载主题</p>
 <pre><code>$ cd blog
 $ git clone https://github.com/iissnan/hexo-theme-next themes/next
-</code></pre><p>blog目录下，打开 <code>_config.yml</code>文件，找到<code>theme</code>字段，并将其值更改为<code>next</code>。<br>Hexo命令，<strong><em>注意</em></strong> 部署到本地，同样必须执行下面三条命名，浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+</code></pre><p>blog目录下，打开 <code>_config.yml</code>文件，找到<code>theme</code>字段，并将其值更改为<code>next</code>。<br>Hexo命令，<strong><em>注意</em></strong> 部署到本地，同样必须执行清除缓存，浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
 <pre><code>$ hexo clean
 $ hexo g
 $ hexo s
@@ -536,8 +536,7 @@ $ hexo s
   
     <div class="comments" id="comments">
       
-        <div onclick="showGitment()" id="gitment-display-button">显示评论</div>
-        <div id="gitment-container" style="display:none"></div>
+        <div id="gitment-container"></div>
       
     </div>
 
@@ -886,11 +885,7 @@ $ hexo s
       }
 
       
-      function showGitment(){
-        document.getElementById("gitment-display-button").style.display = "none";
-        document.getElementById("gitment-container").style.display = "block";
-        renderGitment();
-      }
+      renderGitment();
       
       </script>
     
