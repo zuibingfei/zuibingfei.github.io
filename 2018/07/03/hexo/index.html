@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -87,7 +94,7 @@
 <meta property="og:site_name" content="醉冰飞">
 <meta property="og:description" content="作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。 安装前提1.Node.js：生成Hexo静态页面，下载安装 Node.js2.Git：本地Hexo提交到Github，下载安装 Git这里说一下我的系统是 macOS High Sierra">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T10:01:27.590Z">
+<meta property="og:updated_time" content="2018-07-04T02:01:34.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Page+Hexo  NexT+Gitment个人博客">
 <meta name="twitter:description" content="作为一个程序猿，那么就要有一个自己的博客。Github Page+Hexo是自己比较喜欢的，自己想怎么玩就怎么玩。GithubPage和Hexo是什么，自己就不多介绍了，一搜一大堆。这里说流程和遇到的问题。 安装前提1.Node.js：生成Hexo静态页面，下载安装 Node.js2.Git：本地Hexo提交到Github，下载安装 Git这里说一下我的系统是 macOS High Sierra">
@@ -100,7 +107,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -148,6 +155,8 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
+    <a href="https://github.com/zuibingfei"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -161,7 +170,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">一只小小鸟</p>
+        <h1 class="site-subtitle" itemprop="description">一只小小鸟</h1>
       
   </div>
 
@@ -268,7 +277,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="醉冰飞">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/../images/avatar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -280,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Github Page+Hexo  NexT+Gitment个人博客</h1>
+          <h2 class="post-title" itemprop="name headline">Github Page+Hexo  NexT+Gitment个人博客</h2>
         
 
         <div class="post-meta">
@@ -426,7 +435,6 @@ $ hexo g
 $ hexo s
 </code></pre><h4 id="访问统计"><a href="#访问统计" class="headerlink" title="访问统计"></a>访问统计</h4><p>打开<strong>blog/themes/next/_config.yml</strong>文件添加汉字就可以，safari浏览器uv统计不准确<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="comment"># count values only if the other configs are false</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># custom uv span for the whole site</span></span><br><span class="line"><span class="attr">site_uv:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span> <span class="string">访客数</span></span><br><span class="line"><span class="attr">site_uv_footer:</span></span><br><span class="line"><span class="comment"># custom pv span for the whole site</span></span><br><span class="line"><span class="attr">site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">site_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span> <span class="string">访问</span></span><br><span class="line"><span class="attr">site_pv_footer:</span> <span class="string">次</span></span><br><span class="line"><span class="comment"># custom pv span for one page only</span></span><br><span class="line"><span class="attr">page_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">page_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-file-o"&gt;&lt;/i&gt;</span> <span class="string">阅读数</span></span><br><span class="line"><span class="attr">page_pv_footer:</span></span><br></pre></td></tr></table></figure></p>
 <p>其他设置根据官方文档，设置自己喜欢的样式就好了。</p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>avatar头像设置是在站点配置文件下<code>（blog/_config.yml）</code>配置，文档上不正确</p>
 <h2 id="Gitment评论"><a href="#Gitment评论" class="headerlink" title="Gitment评论"></a>Gitment评论</h2><p><strong><em>注意</em></strong> gitment的文档很久没有更新了，使自己走了不少弯路</p>
 <ol>
 <li>注册 OAuth Application<br><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener"><strong>点击此处</strong></a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（自己博客的域名，如<code>username.github.io</code>）。</li>
@@ -447,6 +455,24 @@ $ hexo s
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    醉冰飞
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zuibingfei.github.io/2018/07/03/hexo/" title="Github Page+Hexo  NexT+Gitment个人博客">https://zuibingfei.github.io/2018/07/03/hexo/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -555,7 +581,7 @@ $ hexo s
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/../images/avatar.png"
+                src="/images/avatar.png"
                 alt="醉冰飞" />
             
               <p class="site-author-name" itemprop="name">醉冰飞</p>
@@ -611,9 +637,9 @@ $ hexo s
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://weibo.com/u/3002232057" target="_blank" title="微博">
+                    <a href="https://weibo.com/u/3002232057" target="_blank" title="Weibo">
                       
-                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                        <i class="fa fa-fw fa-globe"></i>Weibo</a>
                   </span>
                 
             </div>
@@ -640,7 +666,7 @@ $ hexo s
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo-官方文档"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo 官方文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Github仓库"><span class="nav-number">3.</span> <span class="nav-text">创建Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Hexo"><span class="nav-number">4.</span> <span class="nav-text">部署Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">5.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题-官方文档"><span class="nav-number">6.</span> <span class="nav-text">NexT主题 官方文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#访问统计"><span class="nav-number">6.0.1.</span> <span class="nav-text">访问统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意"><span class="nav-number">6.0.2.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitment评论"><span class="nav-number">7.</span> <span class="nav-text">Gitment评论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo-官方文档"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo 官方文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Github仓库"><span class="nav-number">3.</span> <span class="nav-text">创建Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Hexo"><span class="nav-number">4.</span> <span class="nav-text">部署Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">5.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题-官方文档"><span class="nav-number">6.</span> <span class="nav-text">NexT主题 官方文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#访问统计"><span class="nav-number">6.0.1.</span> <span class="nav-text">访问统计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitment评论"><span class="nav-number">7.</span> <span class="nav-text">Gitment评论</span></a></li></ol></div>
             
 
           </div>
@@ -706,6 +732,8 @@ $ hexo s
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -884,6 +912,21 @@ $ hexo s
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
