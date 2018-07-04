@@ -1758,18 +1758,7 @@ pre .javascript .function {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  transition: 1.5s all;
 }
-.site-author-image:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -transform: rotate(360deg);
-}
-作者：Devin_,
-链接：https:,
-來源：简书,
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。,
 .site-author-name {
   margin: 5px 0 0;
   text-align: center;
@@ -1850,7 +1839,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #be61ff;
+  background: #de4b9c;
 }
 .links-of-blogroll {
   font-size: 13px;
