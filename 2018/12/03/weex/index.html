@@ -89,15 +89,15 @@
 <meta name="description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
 <meta name="keywords" content="Weex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="weex">
+<meta property="og:title" content="Weex搭建">
 <meta property="og:url" content="https://zuibingfei.github.io/2018/12/03/weex/index.html">
 <meta property="og:site_name" content="醉冰飞">
 <meta property="og:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://zuibingfei.github.io/2018/12/03/weex/weex_image.png">
-<meta property="og:updated_time" content="2018-12-04T02:18:58.313Z">
+<meta property="og:updated_time" content="2018-12-04T09:21:53.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="weex">
+<meta name="twitter:title" content="Weex搭建">
 <meta name="twitter:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
 <meta name="twitter:image" content="https://zuibingfei.github.io/2018/12/03/weex/weex_image.png">
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>weex | 醉冰飞</title>
+  <title>Weex搭建 | 醉冰飞</title>
   
 
 
@@ -289,7 +289,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">weex</h2>
+          <h2 class="post-title" itemprop="name headline">Weex搭建</h2>
         
 
         <div class="post-meta">
@@ -317,7 +317,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-04T10:18:58+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-04T17:21:53+08:00">
                 2018-12-04
               </time>
             
@@ -380,21 +380,30 @@
       
         <p>最近开始研究Weex，这里记录一下环境搭建。<br> <a href="http://weex.apache.org/cn/guide/" target="_blank" rel="noopener">Weex文档</a><br><a id="more"></a></p>
 <h2 id="安装nvm-（Node-js版本管理器）"><a href="#安装nvm-（Node-js版本管理器）" class="headerlink" title="安装nvm （Node.js版本管理器）"></a>安装nvm <small>（Node.js版本管理器）</small></h2><pre><code>$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
-</code></pre><p>nvm听他讲比较好</p>
+</code></pre><p>他人告诉我nvm比较好用</p>
 <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><pre><code>$ nvm install v8.11.0
 $ nvm -v
-</code></pre><p>v8.11比较稳定</p>
-<h2 id="安装Weex-toolkit"><a href="#安装Weex-toolkit" class="headerlink" title="安装Weex-toolkit"></a>安装Weex-toolkit</h2><pre><code>$ npm install -g weex -toolkit
-$ weex -v
-</code></pre><h2 id="安装yarn依赖"><a href="#安装yarn依赖" class="headerlink" title="安装yarn依赖"></a>安装yarn依赖</h2><pre><code>$ npm install yarn -g
+</code></pre><p>v8.11.0比较稳定</p>
+<h2 id="安装Weex-toolkit"><a href="#安装Weex-toolkit" class="headerlink" title="安装Weex-toolkit"></a>安装Weex-toolkit</h2><p>快速创建一个空项目、初始化 iOS 和 Android 开发环境、调试、安装插件等操作<br>    $ npm install -g weex -toolkit<br>    $ weex -v</p>
+<h2 id="安装yarn依赖"><a href="#安装yarn依赖" class="headerlink" title="安装yarn依赖"></a>安装yarn依赖</h2><pre><code>$ npm install yarn -g
 $ yarn 
 $ yarn -v
 </code></pre><h2 id="创建Weex项目"><a href="#创建Weex项目" class="headerlink" title="创建Weex项目"></a>创建Weex项目</h2><p>cd到目录</p>
 <pre><code>$ weex create [项目名称]
+</code></pre><p><code>weex create 命令并不初始化 iOS 和 Android 项目</code>   </p>
+<pre><code>$ weex platform add ios
+$ weex platform add android
 </code></pre><p><img src="/2018/12/03/weex/weex_image.png" alt="终端选项"></p>
-<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>cd到目录</p>
+<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>cd[项目名称]</p>
 <pre><code>$ npm run start
-</code></pre>
+
+$ weex run ios
+$ weex run android
+$ weex run web
+</code></pre><h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><pre><code>$ weex debug
+</code></pre><p>这条命令会启动一个调试服务，并且在 Chrome （目前只支持基于 V8 引擎的桌面浏览器） 中打开调试页面。详细用法请参考 <a href="http://weex.apache.org/cn/tools/toolkit.html" target="_blank" rel="noopener">weex-toolkit</a> 的文档。</p>
+<p><strong><em>终端命令报错注意提示基本都解决</em></strong></p>
+
       
     </div>
     
@@ -599,7 +608,7 @@ $ yarn -v
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nvm-（Node-js版本管理器）"><span class="nav-number">1.</span> <span class="nav-text">安装nvm （Node.js版本管理器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Weex-toolkit"><span class="nav-number">3.</span> <span class="nav-text">安装Weex-toolkit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装yarn依赖"><span class="nav-number">4.</span> <span class="nav-text">安装yarn依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Weex项目"><span class="nav-number">5.</span> <span class="nav-text">创建Weex项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start"><span class="nav-number">6.</span> <span class="nav-text">start</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nvm-（Node-js版本管理器）"><span class="nav-number">1.</span> <span class="nav-text">安装nvm （Node.js版本管理器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Weex-toolkit"><span class="nav-number">3.</span> <span class="nav-text">安装Weex-toolkit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装yarn依赖"><span class="nav-number">4.</span> <span class="nav-text">安装yarn依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Weex项目"><span class="nav-number">5.</span> <span class="nav-text">创建Weex项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start"><span class="nav-number">6.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">7.</span> <span class="nav-text">调试</span></a></li></ol></div>
             
 
           </div>
