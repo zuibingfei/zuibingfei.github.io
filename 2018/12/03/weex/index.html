@@ -95,7 +95,7 @@
 <meta property="og:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://zuibingfei.github.io/2018/12/03/weex/weex_image.png">
-<meta property="og:updated_time" content="2018-12-04T09:23:46.167Z">
+<meta property="og:updated_time" content="2018-12-07T09:34:40.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weex搭建">
 <meta name="twitter:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-04T17:23:46+08:00">
-                2018-12-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-07T17:34:40+08:00">
+                2018-12-07
               </time>
             
           </span>
@@ -403,6 +403,35 @@ $ weex run web
 </code></pre><h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><pre><code>$ weex debug
 </code></pre><p>这条命令会启动一个调试服务，并且在 Chrome （目前只支持基于 V8 引擎的桌面浏览器） 中打开调试页面。详细用法请参考 <a href="http://weex.apache.org/cn/tools/toolkit.html" target="_blank" rel="noopener">weex-toolkit</a> 的文档。</p>
 <p><strong><em>终端命令报错注意提示基本都解决</em></strong></p>
+<p><a href="https://cn.vuejs.org/v2/api/#template" target="_blank" rel="noopener"><big>Vue.js</big></a><br><a href="https://alibaba.github.io/rax/" target="_blank" rel="noopener"><big>Rax</big></a></p>
+<h1 id="结构设计"><a href="#结构设计" class="headerlink" title="结构设计"></a>结构设计</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">router</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">api</td>
+</tr>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">page</td>
+<td style="text-align:center">api</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>页面：首先移动应用应该可以被拆解成若干个页面，每个页面相对解耦独立，同时每个页面都有一个 URL 进行唯一标识。</li>
+<li>路由：这些页面将会通过路由机制有机的串联起来，页面之间的关系是通过路由来进行调度的。常见的移动应用路由包括导航栏、tab 切换等。</li>
+<li>设备能力：以各种 API 或服务的方式提供出来，供页面自由使用。</li>
+</ol>
 
       
     </div>
@@ -608,7 +637,7 @@ $ weex run web
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nvm-（Node-js版本管理器）"><span class="nav-number">1.</span> <span class="nav-text">安装nvm （Node.js版本管理器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Weex-toolkit"><span class="nav-number">3.</span> <span class="nav-text">安装Weex-toolkit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装yarn依赖"><span class="nav-number">4.</span> <span class="nav-text">安装yarn依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Weex项目"><span class="nav-number">5.</span> <span class="nav-text">创建Weex项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start"><span class="nav-number">6.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">7.</span> <span class="nav-text">调试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nvm-（Node-js版本管理器）"><span class="nav-number">1.</span> <span class="nav-text">安装nvm （Node.js版本管理器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Weex-toolkit"><span class="nav-number">3.</span> <span class="nav-text">安装Weex-toolkit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装yarn依赖"><span class="nav-number">4.</span> <span class="nav-text">安装yarn依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Weex项目"><span class="nav-number">5.</span> <span class="nav-text">创建Weex项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start"><span class="nav-number">6.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">7.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构设计"><span class="nav-number"></span> <span class="nav-text">结构设计</span></a></div>
             
 
           </div>
