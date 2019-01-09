@@ -95,7 +95,7 @@
 <meta property="og:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://zuibingfei.github.io/2018/12/03/weex/weex_image.png">
-<meta property="og:updated_time" content="2018-12-27T07:36:48.963Z">
+<meta property="og:updated_time" content="2019-01-09T09:50:01.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weex搭建">
 <meta name="twitter:description" content="最近开始研究Weex，这里记录一下环境搭建。 Weex文档">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-27T15:36:48+08:00">
-                2018-12-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-09T17:50:01+08:00">
+                2019-01-09
               </time>
             
           </span>
@@ -404,33 +404,10 @@ $ weex run web
 </code></pre><p>这条命令会启动一个调试服务，并且在 Chrome （目前只支持基于 V8 引擎的桌面浏览器） 中打开调试页面。详细用法请参考 <a href="http://weex.apache.org/cn/tools/toolkit.html" target="_blank" rel="noopener">weex-toolkit</a> 的文档。</p>
 <p><strong><em>终端命令报错注意提示基本都解决</em></strong></p>
 <h2 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h2><p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener"><big>Vue.js 文档</big></a><br><a href="https://alibaba.github.io/rax/" target="_blank" rel="noopener"><big>Rax 文档</big></a></p>
-<h2 id="结构设计"><a href="#结构设计" class="headerlink" title="结构设计"></a>结构设计</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">route</th>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-<th style="text-align:center">api</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">api</td>
-</tr>
-<tr>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">page</td>
-<td style="text-align:center">api</td>
-</tr>
-</tbody>
-</table>
+<h2 id="结构设计"><a href="#结构设计" class="headerlink" title="结构设计"></a>结构设计</h2><body><br><table border="1" cellspacing="0" cellpadding="10"><br><tr><br><th colspan="3">route</th><br><th>api</th><br></tr><br><tr><br><th>page</th><br><th>page</th><br><th>page</th><br><th>api</th><br></tr><br><tr><br><th>page</th><br><th>page</th><br><th>page</th><br><th>api</th><br></tr><br></table><br></body>
+
+
+
 <ol>
 <li>页面：首先移动应用应该可以被拆解成若干个页面，每个页面相对解耦独立，同时每个页面都有一个 URL 进行唯一标识。</li>
 <li>路由：这些页面将会通过路由机制有机的串联起来，页面之间的关系是通过路由来进行调度的。常见的移动应用路由包括导航栏、tab 切换等。</li>
@@ -661,7 +638,7 @@ $ weex run web
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
